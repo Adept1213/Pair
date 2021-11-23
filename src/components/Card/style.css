@@ -1,0 +1,53 @@
+.card__wrapper {
+    width: 150px;
+    height: 200px;
+    perspective: 400px;
+    transform-style: preserve-3d;
+    
+}
+
+.card, .card_active, .card__back, .card__back_active, .card__back_o{
+    transition: all 0.8s ease 0s;
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
+.card{
+    background-color: #383745;
+    transform: rotateY(0deg);
+}
+
+.card_active {
+    background-color: #383745;
+    transform: rotateY(180deg);
+}
+
+
+.card__back, .card__back_active {
+    position: relative;
+    top: -200px;
+    background-color: #CA8D6E;
+}
+.card__back{   
+    transform: rotateY(0deg);
+}
+
+.card__back_active {
+    transform: rotateY(-180deg);
+}
+.card__back_o {
+    background-color: #CA8D6E;
+}
+
+.card img,
+.card_active img,
+.card__back img,
+.card__back_active img,
+.card__back_o img{
+    margin-top: 15px;
+    max-width: 70%;
+}
